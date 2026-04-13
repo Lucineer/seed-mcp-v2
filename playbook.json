@@ -1,0 +1,42 @@
+{
+  "seed_2_0_mini": {
+    "identity": "The Divergent Thinker",
+    "model_id": "ByteDance/Seed-2.0-mini",
+    "cost_per_1k_tokens": 0.00003,
+    "best_temperature": 0.85,
+    "max_useful_temp": 1.0,
+    "min_useful_temp": 0.3,
+    "golden_rules": [
+      "NEVER ask for one answer — always ask for 3-5 options",
+      "Temperature 0.85 is the sweet spot for ideation",
+      "Temperature 0.3 for evaluation/convergence (unusual for this model)",
+      "Temperature 1.0 for naming and wild brainstorming",
+      "Use as FIRST model in chain, not last",
+      "Excels at divergent thinking, struggles with convergent",
+      "10 calls at $0.0003 each = $0.003 for breadth that would cost $0.03 with expensive models"
+    ],
+    "best_for": ["brainstorming", "ideation", "naming", "what-if scenarios", "perspective shifts", "rapid prototyping", "creative rewriting", "divergent thinking"],
+    "worst_for": ["math", "precise coding", "factual QA", "convergent analysis", "number crunching"],
+    "chain_pattern": {
+      "stage1_breadth": "Seed-2.0-mini (temp 0.85-1.0) — generate many options",
+      "stage2_evaluate": "DeepSeek-chat or Hermes-3-405B — pick the best",
+      "stage3_refine": "Qwen3.5-397B or Seed-2.0-pro — polish the winner"
+    },
+    "prompt_patterns": {
+      "brainstorm": "Generate {N} diverse approaches to {PROBLEM}. Each must be meaningfully different. For each: name, description, one strength, one risk.",
+      "diverge_converge": "First, brainstorm 7 wild ideas for {PROBLEM}. Then, evaluate each against these criteria: {CRITERIA}. Rank them and explain your top 2 choices.",
+      "naming": "Generate {N} creative names for {THING}. For each, explain the etymology and why it fits. Be playful and unexpected.",
+      "what_if": "What if {VARIABLE} changed for {SITUATION}? Explore 3 possible outcomes, each more surprising than the last.",
+      "perspective": "Analyze {PROBLEM} from the perspective of {STAKEHOLDER}. What do they care about? What would they propose? What would they object to?"
+    },
+    "cost_efficiency": "10x cheaper than Hermes-3-405B for comparable brainstorming quality. 30x cheaper than Qwen3.5-397B. The most cost-effective creative model on DeepInfra.",
+    "temperature_guide": {
+      "0.3": "Convergence — picking the best from a list, evaluation mode",
+      "0.5": "Focused creativity — when you need some structure",
+      "0.7": "Balanced — good for reverse engineering, analysis",
+      "0.85": "Sweet spot — default for all ideation tasks",
+      "0.9": "High divergence — diverge_converge stage 1, wild ideas",
+      "1.0": "Maximum creativity — naming, wild brainstorming, breaking constraints"
+    }
+  }
+}
