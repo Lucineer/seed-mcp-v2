@@ -1,0 +1,92 @@
+{
+  "models": [
+    {
+      "id": "ByteDance/Seed-2.0-mini",
+      "tier": 1,
+      "name": "Seed-2.0-Mini",
+      "identity": "The Divergent Thinker",
+      "cost_per_1k_tokens": 0.00003,
+      "best_temperature": 0.85,
+      "best_for": ["brainstorming", "ideation", "naming", "what-if scenarios", "perspective shifts", "rapid prototyping", "creative rewriting", "divergent thinking"],
+      "worst_for": ["math", "precise coding", "factual QA", "convergent analysis"],
+      "notes": "NEVER ask for one answer. Always 3-5 options. Use as FIRST model in chain."
+    },
+    {
+      "id": "bytedance/Seed-2.0-pro",
+      "tier": 2,
+      "name": "Seed-2.0-Pro",
+      "identity": "The Premium Ideator",
+      "cost_per_1k_tokens": 0.00015,
+      "best_temperature": 0.85,
+      "best_for": ["premium ideation", "complex problems", "deep concept development"],
+      "worst_for": ["simple tasks", "fast iterations"],
+      "notes": "Use when mini isn't enough — complex multi-constraint problems."
+    },
+    {
+      "id": "NousResearch/Hermes-3-Llama-3.1-405B",
+      "tier": 2,
+      "name": "Hermes-3-405B",
+      "identity": "The Architect",
+      "cost_per_1k_tokens": 0.0003,
+      "best_temperature": 0.5,
+      "best_for": ["evaluation", "structured ideation", "architecture design", "convergence"],
+      "worst_for": ["wild brainstorming", "creative fiction"],
+      "notes": "The convergent half of the chain. Evaluates Seed-2.0-Mini output."
+    },
+    {
+      "id": "NousResearch/Hermes-3-Llama-3.1-70B",
+      "tier": 2,
+      "name": "Hermes-3-70B",
+      "identity": "The Storyteller",
+      "cost_per_1k_tokens": 0.00006,
+      "best_temperature": 0.8,
+      "best_for": ["creative writing", "roleplay", "future visualization"],
+      "worst_for": ["precise analysis", "math"],
+      "notes": "Good middle ground — creative but structured."
+    },
+    {
+      "id": "Sao10k/L3.3-70B-Euryale-v2.3",
+      "tier": 2,
+      "name": "Euryale-v2.3",
+      "identity": "The Worldbuilder",
+      "cost_per_1k_tokens": 0.00006,
+      "best_temperature": 0.9,
+      "best_for": ["creative fiction", "worldbuilding", "character work"],
+      "worst_for": ["factual tasks", "analysis"],
+      "notes": "Uncensored creative powerhouse. Use for fiction and immersive content."
+    },
+    {
+      "id": "Gryphe/MythoMax-L2-13b",
+      "tier": 3,
+      "name": "MythoMax-L2-13b",
+      "identity": "The Fast Riffer",
+      "cost_per_1k_tokens": 0.00001,
+      "best_temperature": 0.85,
+      "best_for": ["ultra-cheap creative riffing", "quick ideas", "comparisons"],
+      "worst_for": ["complex reasoning", "long-form"],
+      "notes": "Cheapest option. Good for model_compare baseline."
+    },
+    {
+      "id": "allenai/Olmo-3.1-32B-Instruct",
+      "tier": 3,
+      "name": "OLMo-3.1-32B",
+      "identity": "The Scientist",
+      "cost_per_1k_tokens": 0.00004,
+      "best_temperature": 0.5,
+      "best_for": ["scientific topics", "research clarification", "academic writing"],
+      "worst_for": ["creative fiction", "wild brainstorming"],
+      "notes": "Research-oriented. Good for fact-checking creative ideas."
+    },
+    {
+      "id": "microsoft/phi-4",
+      "tier": 3,
+      "name": "Phi-4",
+      "identity": "The Edge Runner",
+      "cost_per_1k_tokens": 0.00005,
+      "best_temperature": 0.6,
+      "best_for": ["edge simulation", "air-gap testing", "fast iterations", "code-heavy tasks"],
+      "worst_for": ["long-form creative", "complex worldbuilding"],
+      "notes": "Small and fast. Good for testing ideas that need code."
+    }
+  ]
+}
